@@ -759,7 +759,6 @@ p.a02{
  margin-left: 11%;
 }
 
-
 @-moz-document url-prefix(){
     div.vv{
 padding-top: 2vw;
@@ -804,5 +803,4 @@ font-size: 0.8vw;
  padding: 10px;
  border-bottom: solid 1px #575b6d;
 }
-
 }
