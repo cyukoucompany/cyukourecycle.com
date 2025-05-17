@@ -760,3 +760,49 @@ p.a02{
 }
 
 
+@-moz-document url-prefix(){
+    div.vv{
+padding-top: 2vw;
+  float: right;
+  margin-right: 5vw;
+  margin-top: -6vw;
+}
+
+p.vv{
+  font-size: 0.7vw;
+}
+
+h2.prh {
+  margin-top: 2vw;
+  margin-left: 17%;
+  font-size: 1.8vw;
+  position: relative;
+  line-height: 1.4;
+  padding:0.25vw 1vw;
+  display: inline-block;
+}
+
+h2.prm {
+  margin-top: 4vw;
+  margin-left: 10%;
+  font-size: 1.8vw;
+  position: relative;
+  line-height: 1.4;
+  padding:0.25vw 1vw;
+  display: inline-block;
+}
+
+.t_th {
+  font-size: 1vw;
+ padding: 10px;
+ border-bottom: solid 4px #575b6d;
+ background-color: #575b6d;
+ color: #ffffff
+}
+.t_tr {
+font-size: 0.8vw;
+ padding: 10px;
+ border-bottom: solid 1px #575b6d;
+}
+
+}
