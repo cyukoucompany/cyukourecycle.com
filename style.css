@@ -526,15 +526,15 @@ h2.prh:before, h2:after {
 }
 
 h2.prh:before {
-  border-left: solid 2px #eaa955;
-  border-top: solid 2px #eaa955;
+  border-left: solid 0.2vw #eaa955;
+  border-top: solid 0.2vw #eaa955;
   top:0;
   left: 0;
 }
 
 h2.prh:after {
-  border-right: solid 2px #B4D43B;
-  border-bottom: solid 2px #B4D43B;
+  border-right: solid 0.2vw #B4D43B;
+  border-bottom: solid 0.2vw #B4D43B;
   bottom:0;
   right: 0;
 }
@@ -554,22 +554,22 @@ h2.prm {
 
 h2.prm:before, h2:after { 
   content:'';
-  width: 20px;
-  height: 30px;
+  width: 1.2vw;
+  height: 1.8vw;
   position: absolute;
   display: inline-block;
 }
 
 h2.prm:before {
-  border-left: solid 2px #eaa955;
-  border-top: solid 2px #eaa955;
+  border-left: solid 0.2vw #eaa955;
+  border-top: solid 0.2vw #eaa955;
   top:0;
   left: 0;
 }
 
 h2.prm:after {
-  border-right: solid 2px #B4D43B;
-  border-bottom: solid 2px #B4D43B;
+  border-right: solid 0.2vw #B4D43B;
+  border-bottom: solid 0.2vw #B4D43B;
   bottom:0;
   right: 0;
 }
@@ -617,7 +617,7 @@ img.s{
 }
 
 div.vv{
-
+padding-top: 20px;
   float: right;
   margin-right: 5vw;
   margin-top: -6vw;
@@ -758,4 +758,5 @@ p.a02{
   margin-top: 10vw;
  margin-left: 11%;
 }
+
 
