@@ -805,3 +805,8 @@ font-size: 0.8vw;
 }
 }
 
+
+.div.kn{
+  line-height: 1.5;
+  word-break: break-word;
+}
