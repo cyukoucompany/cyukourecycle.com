@@ -804,3 +804,9 @@ font-size: 0.8vw;
  border-bottom: solid 1px #575b6d;
 }
 }
+
+@-moz-document url-prefix() {
+  h2.prh {
+    margin-left: 8%; /* ← 13% → 8%にして中央寄りに修正 */
+  }
+}
