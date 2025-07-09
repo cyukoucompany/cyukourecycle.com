@@ -807,6 +807,6 @@ font-size: 0.8vw;
 
 @-moz-document url-prefix() {
   h2.prh {
-    margin-left: 6%; /* ← 13% → 8%にして中央寄りに修正 */
+    margin-left: 5%; /* ← 13% → 8%にして中央寄りに修正 */
   }
 }
