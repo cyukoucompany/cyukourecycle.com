@@ -1,4 +1,3 @@
-
 html, body {
   width: 100%;
   height: 100%;
@@ -7,7 +6,6 @@ html, body {
   }
 
 * {
-margin:4px;
 padding:0;
 }
 .container {
@@ -23,13 +21,17 @@ header{
    overflow: hidden;
    margin:0px;
    padding:0px;
-   min-height:20px;
-   max-height:100px;
-  padding-left: 10px /*全体的に左へずらす*/
+   min-height:5px;
+   max-height:40px;
+  padding-left: 10px; /*全体的に左へずらす*/
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
     body {
+      margin: 0;
       background-color: #ffffff
   }
   *,
@@ -53,37 +55,35 @@ header{
   }
 
 .logo{
-  margin-top: 0.8vw;
+  margin-top: -15;
   width : 16vw;
 }
 
 
   .pagetop a {
-    height: 4vw;
-    width: 4vw;
+    width: clamp(35px, 4vw, 60px);
+    height: clamp(35px, 4vw, 60px);
     position: fixed;
     right: 28px;
     bottom: 30px;
-    background: #fff;
-    border: solid 4px #eaa955;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    z-index: 2;
- 
+    background:#fff;
+    border: solid clamp(2px, 0.25vw, 4px) #eaa955;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+    z-index:2;
   }
 
 
   .pagetop a::after {
-    content: '';
-    width: 8.8px;
-    height: 8.8px;
-    border-top: 4px solid #eaa955;
-    border-left: 4px solid #eaa955;
-    transform: rotate(45deg);
-    transition: 0.3s;
+    content:'';
+    width:clamp(7px, 0.8vw, 12px);
+    height:clamp(7px, 0.8vw, 12px);
+    border-top:solid clamp(2px, 0.25vw, 4px) #eaa955;
+    border-left:solid clamp(2px, 0.25vw, 4px) #eaa955;
+    transform:rotate(45deg);
 
   }
   
@@ -336,6 +336,113 @@ img.srou {
   width: 100%;
 }
 
+/*お知らせ*/
+
+ .notice{
+    position: relative;
+    letter-spacing: 2.5px;
+    padding: 1rem 3.5rem;
+    border-bottom: 6px solid #575b6d;
+    padding-bottom: 2px;
+    font-size: 1.6vw;
+
+  }
+  
+  .notice:before {
+    color:#575b6d;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 12%;
+    height: 6px;
+    content: '';
+    background: #b4d43b;
+  }
+
+  .new{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    gap:20px;
+}
+
+.news-card{
+    flex:1;
+    text-decoration:none;
+    color:#333;
+    border:1px solid #ddd;
+    background:#e7e7e7;
+    display:flex;
+    flex-direction:column;
+}
+
+.news-card img{
+    width:100%;
+    display:block;
+}
+
+.news-card p{
+    order:-1;
+    margin:0;
+    padding:10px;
+    min-height:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#B4D43B;
+    color:#000;
+    font-weight:bold;
+    font-size: 1.7vw;
+    text-align:center;
+    line-height:1.3;
+}
+  
+.contact-box{
+    width:min(90%, 900px);
+    margin:40px auto 0;
+    text-align:center;
+}
+
+/* 文章 */
+.contact-text{
+    font-size:clamp(11px, 1vw, 18px);
+    line-height:1.8;
+    color:#333;
+    text-align:center;
+    margin-bottom:14px;
+}
+
+/* ライン */
+.contact-line{
+    width:clamp(180px, 45vw, 500px);
+    height:2px;
+    margin:0 auto 20px;
+    background:linear-gradient(
+        90deg,
+        #eaa955,
+        #e8ff83,
+        #B4D43B
+    );
+}
+
+/* ボタン */
+.contact-btn{
+    display:inline-block;
+    padding:clamp(8px,0.8vw,14px) clamp(18px,2vw,40px);
+    border-radius:999px;
+    background:linear-gradient(90deg,#eaa955,#B4D43B);
+    color:#fff;
+    text-decoration:none;
+    font-size:clamp(11px,0.9vw,17px);
+    font-weight:bold;
+    transition:.3s;
+}
+
+.contact-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
 /*業務内容画像*/
 img.base{
   height: auto;
@@ -353,7 +460,7 @@ p.setumei {
 
 p.setumei{
   margin-top: -0.2vw;
-  margin-bottom: -2.6vw;
+  margin-bottom: -2vw;
   margin-left: 1vw;
 	display: flex;
 	align-items: center;
@@ -367,7 +474,7 @@ p.setumei{
   p.setumei::before {
     content: '';
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1vw;
     width: 40px;
     height: 1px;
     background-color: #000000;
@@ -376,8 +483,8 @@ p.setumei{
   /**/
    
   .contentA,.contentB{
+    margin: 0 1.5vw;
    width: 50%;
-   height: 100px;
   }
    
   .main{
@@ -432,10 +539,9 @@ div.bcr{
 }
 
 p.ji{
-  margin-top: 22vw;
-  margin-left: 2.4vw;
+  margin: 0 2.4vw 2vw;
   font-size: 0.8vw;
-  margin-bottom: 2vw;
+  line-height: 1.6;
 }
 
 div.jigyou{
@@ -478,8 +584,8 @@ div.jigyou{
     }
   }
   p.sebumeibun{
-    font-size: 1vw;
-    margin-left: 3.8vw;
+    font-size: 1.3vw;
+    margin-left: 6vw;
  margin-top: 3vw;
  margin-bottom: 1vw;
   }
@@ -513,29 +619,29 @@ h2.prh {
   font-size: 1.5vw;
   position: relative;
   line-height: 1.4;
-  padding:0.25vw 1vw;
+  padding: 0.6vw 1.5vw;
   display: inline-block;
 }
 
-h2.prh:before, h2:after { 
-  content:'';
-  width: 20px;
-  height: 30px;
+h2.prh:before,
+h2.prh:after {
+  content: '';
+  width: 1.5vw;
+  height: 1.5vw;
   position: absolute;
-  display: inline-block;
 }
 
 h2.prh:before {
   border-left: solid 0.2vw #eaa955;
   border-top: solid 0.2vw #eaa955;
-  top:0;
+  top: 0;
   left: 0;
 }
 
 h2.prh:after {
   border-right: solid 0.2vw #B4D43B;
   border-bottom: solid 0.2vw #B4D43B;
-  bottom:0;
+  bottom: 0;
   right: 0;
 }
 
@@ -552,7 +658,8 @@ h2.prm {
   display: inline-block;
 }
 
-h2.prm:before, h2:after { 
+h2.prm:before,
+h2.prm:after{
   content:'';
   width: 1.2vw;
   height: 1.8vw;
@@ -587,19 +694,19 @@ table.table1{
 }
 
 div.tori{
-  margin-bottom: 3vw;
+    margin-bottom:2vw;;
 }
 
 footer {
-  margin-top: -1vw;
-  padding-bottom: -2vw;
-  width: 99.6%;
-  height: 120px; 
-  text-align: center;
+  margin-top:0;
+  width:100%;
+  height:10%;
   background-color: #000;
 }
 .footer-text {
   color: #fff;
+  text-align: center;
+margin: auto;
 }
 img.m{
   margin-top: 4vw;
@@ -643,11 +750,10 @@ div.tori{
 }
 
 .wa_ot{
-      background-color: #000;
-    padding: 20px;
-    height: 600px;
-    max-width: 1900px;
-
+    background-color:#000;
+    padding:20px;
+    height:auto;
+    max-width:1900px;
 }
 
 
@@ -746,10 +852,10 @@ p.tuika{
 }
 
 p.a02{
-  margin-top:auto;
+  margin-top:-2vw;
   color: #fff;
   text-align: left;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
   font: bold;
 }
 
@@ -808,4 +914,34 @@ font-size: 0.8vw;
 
 div.vv{
 margin-top: -4vw;
+}
+
+.box4,
+.box3{
+    margin:0;
+    padding:0;
+}
+
+.news-img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.news-img:hover{
+    opacity:.8;
+}
+
+#overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#overlay img{
+    max-width:90%;
+    max-height:90%;
 }
