@@ -21,8 +21,8 @@ header{
    overflow: hidden;
    margin:0px;
    padding:0px;
-   min-height:5px;
-   max-height:40px;
+   min-height:6px;
+   max-height:42px;
   padding-left: 10px; /*全体的に左へずらす*/
    display: flex;
   align-items: center;
